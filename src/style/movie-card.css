@@ -1,0 +1,38 @@
+/* .movie-card {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+} */
+
+
+div.movie-card {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  /* border: 1.2px solid #ccc; */
+  float:inline-start;
+  width: auto;
+}
+
+div.movie-card:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+div.movie-card img {
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  position: relative;
+  height: auto;
+  width: 100%;
+  background-color: cornflowerblue;
+  padding: 1.2rem;
+  text-align:center;
+}
+p{
+  color: white;
+  font-size: larger;
+  font-family: "poppins" sans-serif;
+  font-weight: 1.2rem;
+}
