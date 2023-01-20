@@ -7,3 +7,8 @@
 body {
   font-family: "Monteserrat", sans-serif;
 }
+
+
+a:active {
+  color: #eee;
+}

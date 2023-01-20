@@ -2,6 +2,11 @@
 import './App.css';
 import { Navbar , MovieList} from './components';
 import { useState } from 'react';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import MovieDetails from "./pages/MovieDetails";
+import About from './pages/About';
+import Home from './pages/Home';
+import Movie from './pages/Movie';
 import axios from 'axios';
 
 
@@ -34,10 +39,21 @@ function App() {
        setInputValue={setInputValue}
       />
 
-      <MovieList 
+      <Router>
+        <Routes>
+          <Route path='movie-list'
+          element={<Movie movieList={movies} isLoading={isLoading}/>}
+          />
+          <Route path="/:search/:id" element={<MovieDetails />} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/' element={<Home/>} />
+
+        </Routes>
+      </Router>
+      {/* <MovieList 
       movieList={movies}
       isLoading={isLoading}
-      />
+      /> */}
     </div>
   );
 }
